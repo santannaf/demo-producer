@@ -11,12 +11,12 @@ plugins {
 	id("com.github.davidmc24.gradle.plugin.avro") version "1.9.1"
 }
 
-group = "com.example"
+group = "com.santannaf.demo.kafka.producer"
 version = "0.0.1"
 
 java {
 	toolchain {
-		languageVersion = JavaLanguageVersion.of(22)
+		languageVersion = JavaLanguageVersion.of(21)
 	}
 }
 
@@ -26,10 +26,9 @@ repositories {
 }
 
 dependencies {
-
 	implementation("com.tanna.spring:kafka:0.0.3") {
 		implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.8.0")
-		implementation("com.github.avro-kotlin.avro4k:avro4k-core:2.1.1")
+		implementation("com.github.avro-kotlin.avro4k:avro4k-core:1.10.1")
 		implementation("org.apache.avro:avro:1.12.0")
 	}
 
